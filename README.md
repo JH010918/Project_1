@@ -18,6 +18,18 @@
 | OpenCV | 이미지 로드, 크기 조정, 전처리 수행 |
 | Flask | AI 모델을 제공하는 웹 서버 실행 |
 
+## 💾 데이터
+### 1️⃣ 수집
+- 크롤링
+  - Python을 사용한 웹 크롤링을 통해 데이터 수집
+### 2️⃣ 전처리
+  - 해상도 : 256px * 256px
+  - jpg 포맷
+  - 사람, 로고 등이 들어가 있는 이미지 제거
+### 3️⃣ 라벨링
+- clean
+- dirty
+
 <h2>🛠 개발 환경 (Development Environment)</h2>
 
 <table width="100%">
@@ -71,62 +83,4 @@
 </tr>
 </table>
 
-<h2>⚙ 서보모터 구성 및 설정 (Servo Motor Configuration)</h2>
 
-<h3>Basic Parameters 1</h3>
-
-- Movement amount per rotation : **10000 μm**
-
-<h3>Basic Parameters 2</h3>
-
-- Speed limit value : **3000 mm/min**  
-- Acceleration time 0 : **500 ms**  
-- Deceleration time 0 : **500 ms**
-
-<h3>Detailed Parameters 2</h3>
-
-- Acceleration time 1 : **200 ms**  
-- Acceleration time 2 : **500 ms**  
-- Deceleration time 1 : **200 ms**  
-- Deceleration time 2 : **500 ms**  
-- JOG speed limit value : **3000 mm/min**
-
-<h3>HPR Basic Parameters</h3>
-
-- HPR direction : **Reverse direction**  
-- HPR speed : **1500 mm/min**  
-- Creep speed : **80 mm/min**  
-- HPR retry : **Retry HPR with limit switch**
-
-<h3>System Configuration</h3>
-
-PLC → 위치결정모듈 → 서보앰프 → 서보모터 → 서보앰프 (Feedback)
-
-## 🔎 구현 상세
-### 1️⃣ 선입 선출
-- 선입
-  - 금속 센서와 비금속 센서의 신호가 ON되면 적재 층 카운트, 적재 수량 카운트를 1 증가
-  - 적재 층 카운트에 따라 설정된 층에 소재 적재
-  - 센서 인식 내부 릴레이를 통해 창고의 전/후진 여부 결정
-  - 적재 층 카운트 3에 도달하면 카운트 초기화
-  - 적재 수량 카운트 3에 도달하면 이후 들어오는 소재 배출
-- 선출
-  - 출고 윈도우에 출고 횟수 설정, 설정된 횟수만큼 동작
-  - 출고 횟수에 따라 출고 층 카운트 1 증가, 적재 수량 카운트 1 감소
-  - 출고 층 카운트 3에 도달하면 카운트 초기화
-  - 적재 수량 카운트 0이라면 작동 X
-### 2️⃣ 상태점점
-  - 층별 상태 점검 버튼 존재
-  - 선입 동작 중 각 창고 위치 학습(티칭)
-  - 상태 점검 버튼 누르면 해당 층 소재 출고
-  - 소재 공급 후 동작 버튼 누르면 출고된 층에 다시 적재
-### 3️⃣ 안전설계
-- 비상 정지 회로
-  - 비상 버튼을 누르면 모든 동작 중지, 흡착 모터는 계속 작동
-  - 화면에 나오는 윈도우를 통해 재가동과 초기화 선택 가능
-- 후진완료 릴레이
-  - 전원 ON과 동작 완료 이후 모든 실린더가 후진완료되어있지 않다면 후진 신호 ON
-  - 모든 실린더가 후진되었다면 서보 모터 원점 복귀
-- InterLock 회로
-  - 선입, 선출, 상태점검 등 각 동작 릴레이에 다른 동작의 릴레이를 B접점
-  - 선입이 작동하고 있다면 선출, 상태점검은 버튼을 눌러도 작동하지 않게 됨
