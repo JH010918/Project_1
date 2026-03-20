@@ -21,17 +21,18 @@
 | Flask | AI 모델을 제공하는 웹 서버 실행 |
 | MYSQL | 청결도 이미지 데이터베이스 관리 |
 
-## 📌 시스템 아키텍처
+## ⚙️ 시스템 아키텍처
 <img width="725" height="483" alt="system_architecture" src="https://github.com/user-attachments/assets/389489cd-f0d0-499e-b41c-b6e98d15546f" />
 
 ## 💾 데이터
 ### 1️⃣ 수집
 - 크롤링
-  - Python을 사용한 웹 크롤링을 통해 데이터 수집
+  - Python을 사용한 웹 크롤링
 ### 2️⃣ 전처리
   - 해상도 : 256px * 256px
   - jpg 포맷
-  - 사람, 로고 등이 들어가 있는 이미지 제거
+  - 사람, 로고 등 이미지 제거
+  - gray scale 적용
 ### 3️⃣ 라벨링
 - clean
 - dirty
