@@ -9,7 +9,7 @@
   - 이미지 업로드 및 청결도 점수화 (0~100점)
   - Grad-CAM을 이용한 오염/무질서 구역 시각화(히트맵)
   - YOLO 기반의 객체 분포 분석
-  - CLIP 기반의 방 상태 요약 제
+  - CLIP 기반의 방 상태 요약
 - 이미지 데이터 : https://drive.google.com/drive/folders/1xH8Oj7zAddebDz-nC4Pb0cQJk2OXOPtT?usp=drive_link
 ## 🔧 기술 스택
 | 기술 | 설명 |
