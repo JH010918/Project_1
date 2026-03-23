@@ -29,7 +29,7 @@
 | MYSQL | 청결도 이미지 데이터베이스 관리 |
 
 ## ⚙️ 시스템 아키텍처
-<img width="725" height="483" alt="system_architecture" src="https://github.com/user-attachments/assets/389489cd-f0d0-499e-b41c-b6e98d15546f" />
+![system_architecture](img/system_architecture.png)
 
 ## 💾 데이터
 ### 1️⃣ 수집
