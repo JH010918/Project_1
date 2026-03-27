@@ -41,16 +41,6 @@
 - dirty
   - 판단 기준 : 10.1017/S1041610209990135 참고
 
-## 🪜 모델
-### 1️⃣ 사용 모델
-- ResNet50
-- YOLO26
-- CLIP
-### 2️⃣ 학습
-- train / val / test 데이터셋 분리
-- 하이퍼파라미터 튜닝
-- Early stopping 적용
-
 ## 🎥 시연
 ![uiux1](img/ui_ux1.jpg)
 ![uiux1](img/ui_ux2.png)
