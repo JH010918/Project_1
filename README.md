@@ -23,7 +23,7 @@
 | Pytorch, TensorFlow,OpenAI CLIP| 이미지를 학습하여 청결도를 분류하는 딥러닝 모델 학습 |
 | OpenCV | 이미지 로드, 크기 조정, 전처리 수행 |
 | Flask | AI 모델을 제공하는 웹 서버 실행 |
-| MYSQL | 커뮤니 데이터베이스 관리 |
+| MYSQL | 커뮤니티 데이터베이스 관리 |
 
 ## ⚙️ 시스템 아키텍처
 ![system_architecture](img/system_architecture.png)
