@@ -47,8 +47,6 @@
 
 ## 🎥 시연
 ![uiux1](img/ui_ux1.jpg)
-사진 업로드
-
 ![uiux1](img/ui_ux2.png) <br/>
 ![uiux1](img/ui_ux3.png)
 ![uiux1](img/ui_ux4.png)
