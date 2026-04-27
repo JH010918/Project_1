@@ -52,10 +52,10 @@
 
 
 ## 🎥 시연
-![uiux1](img/ui_ux1.jpg)
+![uiux1](img/ui_ux1.jpg) <br/>
 ![uiux1](img/ui_ux2.png) <br/>
-![uiux1](img/ui_ux3.png)
-![uiux1](img/ui_ux4.png)
+![uiux1](img/ui_ux3.png) <br/>
+![uiux1](img/ui_ux4.png) <br/>
 
 ## 🚨 트러블슈팅
 ### 1️⃣ 이미지 오분류 문제
